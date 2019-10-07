@@ -13,12 +13,12 @@
     </center>
 
     <form onsubmit="validSubmission()" action="customerBackend.php" method="post">
-      <p>Username: <input type="text" id="user" value=""></p><br>
-      <p>Password: <input type="text" id="pass" value=""></p><br>
+      <p>Username: <input type="text" id="user" name="user"></p><br>
+      <p>Password: <input type="text" id="pass" name="pass"></p><br>
 
       <p>Select Shipping Option</p><br>
-      <select id="shipping" name="ship" value="shipping">
-        <option name="null" value="">Select Shipping<br>
+      <select id="shipping" name="shipping">
+        <option name="empty" value="empty">Select Shipping<br>
         <option name="free" value="free">Free Shipping: Free<br>
         <option name="overnight" value="overnight">Overnight Shipping: $50<br>
         <option name="three_day" value="three_day">3 Day Shipping: $8<br>
@@ -26,17 +26,17 @@
 
       <center>
         <h3>Xbox One X: $400</h3>
-        Quantity: <input type="text" name="xbox" id="xboxonex" value=""><br>
+        Quantity: <input type="text" name="xbox" id="xboxonex"><br>
           <img src="images/xbox_one_x.jpg" width="300" height="200" id="xbox"><br>
         <h3>Playstation 4 Controller: $40</h3>
-        Quantity: <input type="text" name="controller" id="controller" value=""><br>
+        Quantity: <input type="text" name="controller" id="controller"><br>
           <img src="images/ps4_controller.jpeg" width="200" height="200" id="cont"><br>
         <h3>Nintendo Switch: $300</h3>
-        Quantity: <input type="text" name="nswitch" id="nswitch" value=""><br>
+        Quantity: <input type="text" name="nswitch" id="nswitch"><br>
           <img src="images/nintendo_switch.jpg" width="300" height="200" id="switch"><br><br>
       </center>
 
-      <input type="submit" name="Submit"><br>
+      <input type="submit" name="Submit" value="Submit"><br>
       <input type="reset" name="Reset"><br>
     </form>
   </body>

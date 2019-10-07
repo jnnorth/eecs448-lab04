@@ -10,7 +10,7 @@ function validSubmission()
     display_message = display_message + " Please select a shipping method! ";
   }
 
-  if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)))
+  if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) || email = "")
   {
     display_message = display_message + " Invalid Email Address! ";
   }
@@ -39,13 +39,15 @@ function validSubmission()
     display_message = display_message + " Nintendo Switch field must be at least 0! ";
   }
 
-  if (display_message = "")
+  if (display_message != "")
   {
-    alert("Success!");
+	alert(display_message);
+	return false;
   }
 
   else
   {
-    alert(display_message);
+
+	return true;
   }
 }
